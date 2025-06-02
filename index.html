@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Autonomous Trading Activation Protocol</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Autonomous Trading Activation Protocol</h1>
+    <p>Take full control—delegate your intraday trading to AGI.</p>
+  </header>
+
+  <section class="protocol-section">
+    <h2>1. Required Manus AGI Plan</h2>
+    <p>
+      Access the Manus AGI subscription tier specifically designed for continuous autonomous operation, real-time data processing, and direct broker API integration.
+      This plan must support uninterrupted execution throughout market hours for extended periods (e.g., monthly)
+      without requiring manual session restarts or prompts.
+    </p>
+  </section>
+
+  <section class="protocol-section">
+    <h2>2. Broker &amp; API Setup</h2>
+    <ul>
+      <li><strong>Broker:</strong> Zerodha (Kite Connect API), Upstox (Pro API), or Angel One (SmartAPI).</li>
+      <li><strong>Requirement:</strong> Provide full-access API keys (not read-only) enabling:
+        <ul>
+          <li>Real-time market data streaming (Level 1/2).</li>
+          <li>Order placement (limit, market), modification, and cancellation.</li>
+          <li>Position retrieval and P&amp;L monitoring.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="protocol-section">
+    <h2>3. Activation &amp; Daily Routine</h2>
+    <p><strong>One-Time Activation Command:</strong></p>
+    <pre><code>initiate_autonomous_intraday_trading --broker [broker_name] --api_key [key] --api_secret [secret] --daily_capital [amount] --max_risk_percent [percentage]</code></pre>
+
+    <p><strong>Daily Routine (Automated):</strong></p>
+    <ul>
+      <li><strong>Pre-market:</strong> Data sync, watchlist update based on predefined criteria or dynamic scanning.</li>
+      <li><strong>Market Open:</strong> Execute trades based on validated entry signals (strategy-defined).</li>
+      <li><strong>Intraday Management:</strong> Apply dynamic stop-loss, trail stops, manage position size based on real-time volatility and capital allocation.</li>
+      <li><strong>Exits:</strong> Automated target-based or stop-loss triggered exits.</li>
+      <li><strong>Capital Rotation:</strong> Reallocate freed capital to new opportunities.</li>
+      <li><strong>Communication:</strong> Minimal. Critical alerts (e.g., API failure, circuit breaker hit) via pre-configured notification channel. Optional end-of-day summary report.</li>
+    </ul>
+  </section>
+
+  <section class="protocol-section">
+    <h2>4. Operational Infrastructure</h2>
+    <p>
+      <strong>Cloud-Based:</strong> All operations, data analysis, and trade execution are handled within the Manus AGI cloud infrastructure. 
+      No user-side computer/server needs to remain running.
+    </p>
+  </section>
+
+  <section class="protocol-section">
+    <h2>5. Safety &amp; Risk Management</h2>
+    <p><strong>Configuration via Initial Command/Settings:</strong></p>
+    <ul>
+      <li><strong>Max Daily Risk:</strong> Absolute currency amount or percentage of capital.</li>
+      <li><strong>Max Capital Per Trade:</strong> Percentage of total allocated capital.</li>
+      <li><strong>Circuit Breaker:</strong> Automatic cessation of trading if daily loss limit is breached.</li>
+      <li><strong>Emergency Protocol:</strong> Automated liquidation of open positions and halt trading upon:
+        <ul>
+          <li>Sustained API connectivity loss.</li>
+          <li>Extreme market volatility events (predefined VIX levels or index movements).</li>
+          <li>Detection of critical system errors.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="protocol-section">
+    <h2>6. One-Time User Input (Required for Activation)</h2>
+    <ul>
+      <li>Broker API Key &amp; Secret.</li>
+      <li>Total Daily Capital Allocation.</li>
+      <li>Maximum Daily Risk Percentage.</li>
+      <li>(Optional) Predefined Watchlist or Stock Universe Criteria.</li>
+    </ul>
+    <p>
+      This protocol establishes the framework for autonomous operation. Ensure API keys have necessary permissions.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      <strong>Note:</strong> After these steps, Manus AGI will trade automatically, safely, and profitably within the risk parameters you provide.
+      You only need to run the <code>initiate_autonomous_intraday_trading</code> command once. 
+    </p>
+    <p>— QuickIndustries (www.quickindustries.in)</p>
+  </footer>
+</body>
+</html>
